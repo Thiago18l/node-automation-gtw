@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "noEmit": false,
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "useUnknownInCatchVariables": false,
+    "noImplicitAny": true,
+    "typeRoots": ["./@types", "./node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": "./src",
+    "paths": {
+      "@infrastructure/*": ["infrastructure/*"],
+      "@controllers/*": ["controllers/*"],
+      "@data/*": ["data/*"],
+      "@exceptions/*": ["exceptions/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@models/*": ["models/*"],
+      "@providers/*": ["providers/*"],
+      "@repositories/*": ["repositories/*"],
+      "@routes/*": ["routes/*"],
+      "@schemas/*": ["schemas/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "@main": ["main.ts"],
+      "@envs": ["envs.ts"]
+    }
+  },
+  "extends": "./node_modules/@tsconfig/node20/tsconfig.json",
+  "include": ["src", "scripts", "commitlint.config.ts", "src/**/*.ts", ".env"],
+  "exclude": ["node_modules"]
+}
