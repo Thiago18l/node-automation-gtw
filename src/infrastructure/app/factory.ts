@@ -4,7 +4,7 @@ import { Kong } from '@infrastructure/models/model.kong';
 
 interface GatewayInterface {
   conf: Conf;
-  new_gateway(gatewayType: GatewayType): Gateway;
+  new_gateway(): Gateway;
 }
 export class GatewayFactory implements GatewayInterface {
   conf: Conf;
@@ -13,11 +13,11 @@ export class GatewayFactory implements GatewayInterface {
     this.conf = conf;
   }
 
-  public new_gateway(gatewayType: GatewayType): Gateway {
+  public new_gateway(): Gateway {
     const gateways: { [key in GatewayType]: Gateway } = {
       Kong: new Kong(),
     };
-    if (!gateways[gatewayType]) {
+    if (!gateways[this.conf.gateway_type]) {
       throw new Error('tipo de gateway invalido');
     }
     return gateways.Kong;

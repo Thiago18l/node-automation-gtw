@@ -30,7 +30,7 @@
       "@repositories/*": ["repositories/*"],
       "@routes/*": ["routes/*"],
       "@schemas/*": ["schemas/*"],
-      "@services/*": ["services/*"],
+      "@config/*": ["config/*"],
       "@utils/*": ["utils/*"],
       "@main": ["main.ts"],
       "@envs": ["envs.ts"]

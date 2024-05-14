@@ -3,9 +3,17 @@ export type Response = {
   message: string;
 };
 
-export type GatewayType = 'Kong';
+export type GatewayType = string;
 
-export type Conf = {
+export interface Conf {
   gateway_type: string;
   url_proxy: string;
-};
+}
+
+export type PinoLogLevel =
+  | 'fatal'
+  | 'error'
+  | 'warn'
+  | 'info'
+  | 'debug'
+  | 'trace';
